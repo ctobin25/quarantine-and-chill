@@ -35,7 +35,39 @@ $.ajax({
 }
 getCocktails();
 
+// add button to make sure the calls will work  
+getNonAlc();
+getCocktails();
 
 
+searchBtn.addEventListener("click", function(){
+    var hardCheck = document.getElementsByName("hard-check") ;
+    var softCheck = document.getElementById("soft-check") ;
+    // result.innerText = to push the modal look at notes 
+    if (hardCheck = true){
 
-// take grab the info that is needed for the check marks
+    } else if (softCheck = true){
+
+    }
+
+})
+
+searchBtn.addEventListener("click", function(){
+    var rumCheck = document.getElementById("rum-check");
+    var tequilaCheck = document.getElementById("tequila-check");
+    var whiskeyCheck = document.getElementById("whiskey-check");
+    var vodkaCheck = document.getElementById("vodka-check");
+    //result.innertext = to push the modal look at notes 
+    if (rumCheck = true){
+
+    } else if(tequilaCheck = true){
+
+    }else if(whiskeyCheck = true){
+        
+    }else if(vodkaCheck = true){
+        
+    }
+
+
+    
+})
