@@ -74,34 +74,22 @@
 
         <div class="row">
             <div class="medium-4 columns">
-                <h3>Find the perfect drink!</h3>
+                <h3>Find a random drink!</h3>
                 <div class="row">
                     <div class="small-12 columns">
-
-                        <label class="container">Drink Type
-                            <select>
-                                <option value="hard" id="hard-check">Alcoholic</option>
-                                <option value="soft" id="soft-check">Non-Alcoholic</option>
-                            </select>
-                        </label>
-
-                        <label class="container">Liquor Type
-                            <select>
-                                <option value="rum" id="rum-check">Rum</option>
-                                <option value="tequila" id="tequila-check">Tequila</option>
-                                <option value="whiskey" id="whiskey-check">Whiskey</option>
-                                <option value="vodka" id="vodka-check">Vodka</option>
-                            </select>
-                            <button class="button large" data-open="exampleModal" id="drinkSearchBTN">Search</button>
-                        <div class="reveal" id="exampleModal" data-reveal>
-                            <h1 id="drink-results"> results go here</h1>
-                            <button class="close-button" data-close aria-label="Close reveal" type="button">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                        <div class="container">
+                            <button class="button large" id="drinkSearchBTN">Search</button>
+                                <h1 id="drink-name"></h1>
+                                <img id="drink-thumb">
+                                <h4 id="ingred"></h4> 
+                                    <p id="drinkIng1"></p>
+                                    <p id="drinkIng2"></p>
+                                    <p id="drinkIng3"></p>
+                                <br>
+                                <h4 id="howTo"></h4>
+                                <p id="drinkInst"></p>
                         </div>
-                        </label>
-
-
+                        </div>
                     </div>
                 </div>
             </div>
