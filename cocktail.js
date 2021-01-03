@@ -1,100 +1,40 @@
+const searchBtn = document.getElementById("drinkSearchBTN");
+const drinkResults = document.getElementById("drink-name");
+const inGredList = document.getElementById("ingred");
+const drinkIng1EL = document.getElementById("drinkIng1");
+const drinkIng2EL = document.getElementById("drinkIng2");
+const drinkIng3EL = document.getElementById("drinkIng3");
+const howTo = document.getElementById("howTo");
+const drinkInstEL = document.getElementById("drinkInst");
+const drinkImgEL = document.getElementById("drink-thumb")
 
-var hardQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic&1";
-var softQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic&1" ;
-var rumQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=rum&1";
-var tequilaQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=tequila&1";
-var whiskeyQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=whiskey&1";
-var vodkaQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=vodka&1";
-var searchBtn = document.getElementById("drinkSearchBTN");
-
-
-$("drinkSearchBTN").click(function(){
-    var hardCheck = document.getElementsByName("hard-check") ;
-    var softCheck = document.getElementById("soft-check") ;
-
-    if (hardCheck = true){
-        $.ajax({
-            url: hardQueryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-            var hardArray = response.drinks[0];
-            var randomHard = hardArray[Math.floor(Math.random()*hardArray.length)];
-            document.getElementById("hard-check").innerHTML = randomHard ;
-
-        })
-    } else if (softCheck = true){
-        $.ajax({
-            url: softQueryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-            var softArray = response.drinks[0];
-            var randomSoft = softArray[Math.floor(Math.random()*softArray.length)];
-            document.getElementById("soft-check").innerHTML = randomSoft;
-
-        })
-    }
-})
+function getCocktails(){
+    let randomQueryURL = "https://www.thecocktaildb.com/api/json/v1/1/random.php?&1"
+    $.ajax({
+        url: randomQueryURL,
+        method: "GET"
+    }).then(function(response){
+        console.log(response);
+        console.log(response.drinks[0].strDrink);
+        console.log(response.drinks[0].strIngredient1)
+        console.log(response.drinks[0].strIngredient2)
+        console.log(response.drinks[0].strIngredient3)
+        console.log(response.drinks[0].strInstructions)
+        drinkResults.innerHTML = response.drinks[0].strDrink;
+        drinkImgEL.setAttribute("src", response.drinks[0].strDrinkThumb);
+        inGredList.innerHTML = "Ingredient List: ";
+        drinkIng1EL.innerHTML = response.drinks[0].strIngredient1;
+        drinkIng2EL.innerHTML = response.drinks[0].strIngredient2;
+        drinkIng3EL.innerHTML = response.drinks[0].strIngredient3;
+        howTo.innerHTML = "How to make: ";
+        drinkInstEL.innerHTML = response.drinks[0].strInstructions;
+        
+    })
+}
 
 
-
-
-
-
-$("drinkSearchBTN").click(function(){
-    var rumCheck = document.getElementById("rum-check");
-    var tequilaCheck = document.getElementById("tequila-check");
-    var whiskeyCheck = document.getElementById("whiskey-check");
-    var vodkaCheck = document.getElementById("vodka-check");
-    //result.innertext = to push the modal look at notes 
-
-    if (rumCheck = true){
-        $.ajax({
-            url: rumQueryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-            var rumArray = response.drinks[0];
-            var randomRum = rumArray[Math.floor(Math.random()*rumArray.length)]
-            document.getElementsid("drink-results").innerHTML = randomRum;
-        })
-    }
-    else if(tequilaCheck = true){
-        $.ajax({
-            url: tequilaQueryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-            var tequilaArray = response.drinks[0];
-            var randomTequila = tequilaArray[Math.floor(Math.random()*tequilaArray.length)]
-            document.getElementsid("drink-results").innerHTML = randomTequila;
-        })
-    }
-    else if(whiskeyCheck = true){
-        $.ajax({
-            url: whiskeyQueryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-            var whiskeyArray = response.drinks[0];
-            var randomWhiskey = whiskeyArray[Math.floor(Math.random()*whiskeyArray.length)]
-            document.getElementsid("drink-results").innerHTML = randomWhiskey;
-        })       
-    }
-    else if(vodkaCheck = true){
-        $.ajax({
-            url: vodkaQueryURL,
-            method: "GET"
-        }).then(function(response){
-            console.log(response)
-            var vodkaArray = response.drinks[0];
-            var randomVodka = vodkaArray[Math.floor(Math.random()*vodkaArray.length)]
-            document.getElementsid("drink-results").innerHTML = randomVodka;
-        })
-    }
-})
-
-
+searchBtn.addEventListener("click", function(){
+    getCocktails(); 
+});
 
 
