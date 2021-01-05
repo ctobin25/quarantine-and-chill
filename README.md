@@ -10,7 +10,15 @@ I WANT TO find a random movie to watch and drink to have
 SO THAT I can get suggestions to help me choose a movie, and drink to have an enjoyable night
 
 
-## Recources
+## Resources
+These are the APIs used
+    https://www.themoviedb.org/documentation/api
+	https://www.thecocktaildb.com/api.php
+	https://www.themealdb.com/api/json/v1/1/random.php
+
+Foundation was used for style 
+
+
 
 
 ## Authors
