@@ -4,7 +4,7 @@ const inGredList = document.getElementById("ingred");
 const drinkIng1EL = document.getElementById("drinkIng1");
 const drinkIng2EL = document.getElementById("drinkIng2");
 const drinkIng3EL = document.getElementById("drinkIng3");
-const howTo = document.getElementById("howTo");
+const howTo = document.getElementById("howToDrink");
 const drinkInstEL = document.getElementById("drinkInst");
 const drinkImgEL = document.getElementById("drink-thumb")
 
@@ -28,10 +28,8 @@ function getCocktails(){
         drinkIng3EL.innerHTML = response.drinks[0].strIngredient3;
         howTo.innerHTML = "How to make: ";
         drinkInstEL.innerHTML = response.drinks[0].strInstructions;
-        
     })
 }
-
 
 searchBtn.addEventListener("click", function(){
     getCocktails(); 
