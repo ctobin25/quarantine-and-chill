@@ -2,6 +2,13 @@ body {
     background-color: lightslategray;
   }
 
+  
+  .img {text-align:center;
+    margin-left: 41%;
+    margin-top: 2%;
+    height: 200px;
+    width: 200px;}
+
 
   .container {
     display: block;
