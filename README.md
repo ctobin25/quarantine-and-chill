@@ -22,4 +22,4 @@ Foundation was used for style
 
 
 ## Authors
-Adia Boyd, Caroline Tobin, Beau Hengst, Domo Christopher and Evan Chu
+Adia Boyd, Beau Hengst, Caroline Tobin, Domo Christopher and Evan Chu
