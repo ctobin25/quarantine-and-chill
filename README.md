@@ -18,8 +18,8 @@ These are the APIs used
 
 Foundation was used for style 
 
+# Screenshot Deployed Website
 
-
-
+![image](https://drive.google.com/uc?export=view&id=1xNP0bGv9ZSW0caIDmv00lLmSfTCEPS3y)
 ## Authors
 Adia Boyd, Beau Hengst, Caroline Tobin, Domo Christopher and Evan Chu
