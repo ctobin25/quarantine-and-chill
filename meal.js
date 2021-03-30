@@ -22,7 +22,9 @@ function getMeals(){
         //mealIng1EL.innerHTML = response.meals[0].strIngredients1;
         howToMake.innerHTML = "How to make: ";
         mealInstEL.innerHTML = response.meals[0].strInstructions;
-        
+
+        localStorage.setItem("meals", JSON.stringify(response.meals[0]))
+                
     })
 }
 
