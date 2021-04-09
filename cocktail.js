@@ -28,11 +28,11 @@ function getCocktails(){
         drinkIng3EL.innerHTML = response.drinks[0].strIngredient3;
         howTo.innerHTML = "How to make: ";
         drinkInstEL.innerHTML = response.drinks[0].strInstructions;
+
+        localStorage.setItem("cocktails", JSON.stringify(response.drinks[0]))
     })
 }
 
 searchBtn.addEventListener("click", function(){
     getCocktails(); 
 });
-
-
