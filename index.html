@@ -129,7 +129,29 @@
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="js/vendor/jquery.js"></script>
     <script>
-        $(document).foundation();
+        $(document).ready(function() {
+            // get saved meal
+            var mealHistory = JSON.parse(localStorage.getItem("meals"));
+
+            // display saved meal
+            mealResults.innerHTML = mealHistory.strMeal;
+            mealImgEL.setAttribute("src", mealHistory.strMealThumb);
+            howToMake.innerHTML = "How to make: ";
+            mealInstEL.innerHTML = mealHistory.strInstructions;
+
+            // get saved cocktail
+            var cocktailHistory = JSON.parse(localStorage.getItem("cocktails"));
+
+            //display saved cocktail
+            drinkResults.innerHTML = cocktailHistory.strDrink;
+            drinkImgEL.setAttribute("src", cocktailHistory.strDrinkThumb);
+            inGredList.innerHTML = "Ingredient List: ";
+            drinkIng1EL.innerHTML = cocktailHistory.strIngredient1;
+            drinkIng2EL.innerHTML = cocktailHistory.strIngredient2;
+            drinkIng3EL.innerHTML = cocktailHistory.strIngredient3;
+            howTo.innerHTML = "How to make: ";
+            drinkInstEL.innerHTML = cocktailHistory.strInstructions;
+        });
     </script>
     <script src="cocktail.js"></script>
     <script src="meal.js"></script>
