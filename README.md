@@ -1,4 +1,4 @@
-# Quarantine and Chill
+# Quarantine and Chill-the website to search for drink or movie in time
 Quarantine and Chill is an app to output a random movie and drink for you to enjoy when you can't decide what you want.
 
 ## Description
